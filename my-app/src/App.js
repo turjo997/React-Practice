@@ -1,6 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+const number = 444;
+const singer = { name: 'Dr. Mahfuz', job: 'singer' }
+const singer2 = { name: 'Eva Rahman', job: 'singer' }
+
+const singers = [
+  { name: 'Dr. Mahfuz', job: 'singer' },
+  { name: 'Eva Rahman', job: 'singer' },
+  { name: 'Agun', job: 'job' },
+  { name: 'shuvro', job: 'pathor' }
+]
+const singerStyle = {
+  color: 'purple',
+  backgroundColor: 'white'
+}
+
+
+
 function App() {
   const nayoks = ['Rubel', 'Bapparaz', 'Kuber', 'Jashim', 'Salman Shah', 'Riaz']
   return (
@@ -24,11 +42,18 @@ function App() {
       {
         nayoks.map(nayok => <li>Name : {nayok}</li>)
       }
+      {/* {
+        nayoks.map(nayok => <Person name={nayok}></Person>)
+      } */}
 
-      <Person name={nayoks[0]} nayika="moushumi"></Person>
+      {
+        singers.map(singer => <Person name={singer.name}></Person>)
+      }
+
+      {/* <Person name={nayoks[0]} nayika="moushumi"></Person>
       <Person name={nayoks[1]} nayika="cheka"></Person>
       <Person></Person>
-      <Person></Person>
+      <Person></Person> */}
 
       <h5>New Component</h5>
       <p>Rock mama . React Mama</p>
@@ -44,7 +69,7 @@ function Person(props) {
   return (
     <div className="person">
       <h1>{props.name}</h1>
-      <p>Nayika : {props.nayika}</p>
+      <p>{props.nayika}</p>
     </div>
   )
 }
