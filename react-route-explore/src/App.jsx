@@ -19,7 +19,6 @@ function App() {
         { path: '/', element: <Home></Home> },
         { path: '/home', element: <Home></Home> },
         { path: 'products', element: <Products></Products> },
-        { path: '/about', element: <About></About> },
         {
           path: '/friends',
           loader: async () => {
@@ -49,6 +48,7 @@ function App() {
         }
       ]
     },
+    { path: '/about', element: <About></About> },
     { path: '*', element: <div>This route not found: 404</div> }
   ])
 
